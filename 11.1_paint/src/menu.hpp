@@ -28,3 +28,14 @@ void place_icons(cv::Size size)
         }
     }
 }
+
+void create_hueIndex(cv::Rect rect) {
+    cv::Mat m_hueIdx = image(rect);
+    float ratio = 180.f / rect.height;
+
+    for(int i = 0; i < rect.height; i++) {
+        cv::Scalar hue_color(i * ratio, 255, 255);
+        m_hueIdx.row(i).setTo(hue_color);
+    }
+    cv::cvtColor(m_hueIdx, m_hueIdx, cv::COLOR_HSV2BGR);
+}

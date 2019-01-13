@@ -19,6 +19,8 @@ int main()
     icons.push_back(cv::Rect(start_pale, cv::Size(100, 100)));
     icons.push_back(cv::Rect(start_pale + cv::Point(105,0), cv::Size(15,100)));
 
+    create_hueIndex(icons[HUE_IDX]);
+
     cv::imshow("image", image);
     cv::waitKey(0);
     return 0;
