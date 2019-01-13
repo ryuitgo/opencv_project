@@ -12,4 +12,5 @@ linux {
 SOURCES += main.cpp
 
 HEADERS += \
-    menu.hpp
+    menu.hpp \
+    icon_flag.hpp

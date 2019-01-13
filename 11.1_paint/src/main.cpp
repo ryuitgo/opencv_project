@@ -7,6 +7,7 @@ std::vector<cv::Rect> icons;
 cv::Mat image;
 
 #include "menu.hpp"
+#include "icon_flag.hpp"
 
 int main()
 {
