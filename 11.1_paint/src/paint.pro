@@ -6,11 +6,10 @@ CONFIG -= qt
 linux {
     message(==== linux ====)
     INCLUDEPATH += /home/ryuitgo/dev/3rd/opencv/opencv-4.0.0/include/opencv4
-    LIBS += -L/home/ryuitgo/dev/3rd/opencv/opencv-4.0.0/lib -lopencv_core
+    LIBS += -L/home/ryuitgo/dev/3rd/opencv/opencv-4.0.0/lib -lopencv_core -lopencv_imgproc -lopencv_imgcodecs
 }
 
-SOURCES += main.cpp \
-    layout.cpp
+SOURCES += main.cpp
 
 HEADERS += \
-    layout.h
+    menu.hpp
