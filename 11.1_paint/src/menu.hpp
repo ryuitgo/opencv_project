@@ -39,3 +39,14 @@ void create_hueIndex(cv::Rect rect) {
     }
     cv::cvtColor(m_hueIdx, m_hueIdx, cv::COLOR_HSV2BGR);
 }
+
+void create_palette(int pos_y, cv::Rect rect_pale) {
+    cv::Mat m_palette = cv::image(rect_pale);
+    float ratio1 = 180.0f / rect_pale.height;
+    float ratio2 = 256.0f / rect_pale.width;
+    float ratio3 = 256.0f / rect_pale.height;
+
+    hue = cvRound((pos_y - rect_pale.y) * ratio1);
+}
+
+//614p부터읽고코드진행
